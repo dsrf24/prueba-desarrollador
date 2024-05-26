@@ -1,0 +1,31 @@
+<!-- lon=-95.45&lat=29.78&date=2018-01-01&dim=0.15&api_key=DEMO_KEY -->
+
+<h2 class="text-center">Buscar imagen</h2>
+
+<div class="col-md-12 row p-3">
+    <div class="col-md-2">
+        <label for="">Longitud</label>
+        <input step="0.1" type="number" [(ngModel)]="longitud" class="form-control">
+    </div>
+    <div class="col-md-2">
+        <label for="">Latitud</label>
+        <input step="0.1" type="number" [(ngModel)]="latitud" class="form-control">
+    </div>
+    <div class="col-md-4">
+        <label for="">Fecha</label>
+        <input type="date" [(ngModel)]="fecha" class="form-control">
+    </div>
+    <div class="col-md-3">
+        <label for="">DIM</label>
+        <input step="0.1" type="number" [(ngModel)]="dim" class="form-control">
+    </div>
+    <div class="col-md-12">
+        <button style="width: 100%;" (click)="buscarImagen()" class="btn btn-outline-primary rounded-pill m-3">Buscar</button>
+    </div>
+
+    <div class="col-md-12" *ngIf="imageUrl != '' ">
+        <img  [src]="imageUrl" class="img-fluid mx-auto" style="width: 500px; height: 500px;max-width: 500px; max-height: 500px;" alt="Imagen Obtenida">
+    </div>
+    
+
+</div>
