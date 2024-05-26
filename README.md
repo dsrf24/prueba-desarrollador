@@ -34,3 +34,9 @@ cd ruta
 ```bash
 npm install
 ```
+
+### 4. Ejecuta el proyecto
+
+```bash
+ng serve
+```
